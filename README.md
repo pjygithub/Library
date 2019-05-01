@@ -7,11 +7,17 @@
 
 MySql数据库：数据库文件在data文件夹下  
 PHP运行环境，初学者推荐使用PHPStudy或WampServer集成开发工具包
+### 操作指南
+下载或git本库
+解压到网站目录
+导入data下的sql文件
+修改conn目录下的conn.php里的数据库链接账户密码
+访问网站目录
 
 
 ## 以上是原作者<a href="https://github.com/huidge/LMS">/huidge/LMS</a>的更新，这里是修改的文件。
 
-#添加更新说明
+# 添加更新说明
 
 ### 全部网络资源本地化，可以离线使用；
 ### 默认管理密码：admin/admin，经过加密存储,可以登录后修改密码；
