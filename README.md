@@ -8,10 +8,10 @@
 MySql数据库：数据库文件在data文件夹下  
 PHP运行环境，初学者推荐使用PHPStudy或WampServer集成开发工具包
 ### 操作指南
-下载或git本库
-解压到网站目录
-导入data下的sql文件
-修改conn目录下的conn.php里的数据库链接账户密码
+下载或git本库——》
+解压到网站目录——》
+导入data下的sql文件——》
+修改conn目录下的conn.php里的数据库链接账户密码——》
 访问网站目录
 
 
