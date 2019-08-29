@@ -1,6 +1,8 @@
 <?php
 include ("check_login.php"); 
-
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
  session_start();?>
 <!DOCTYPE html>
 <html>

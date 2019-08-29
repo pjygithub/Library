@@ -15,12 +15,40 @@ error_reporting(E_ALL | E_STRICT);
 	<link rel="stylesheet" type="text/css" href="admin/css/nav.css">
     <link rel="stylesheet" type="text/css" href="admin/fonts/iconfont.css">
 </head>
+
 <body>
-	<div class="nav" style="height:auto;">
+	<div class="nav" style="height:100%;">
 	        <div class="nav-top">
-	            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="admin/images/mini.png" >
-	            <span class="userinfo" style="width:10%;over-float:hidden;padding-top:0;padding-left:0px;margin-top:0px;magin-left:0px;">欢迎您，<?php echo $_SESSION["admin_name"];?> </span></div>
-      </tr>
+	            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)">
+	            <p class="userinfo" style="">欢迎您，<?php echo $_SESSION["admin_name"];?>。</p>
+	            <img src="admin/images/mini.png">
+	            <style type="text/css">
+	            *{
+	            	margin: 0px;
+	            	padding: 0px;
+	            }
+	            .userinfo{
+	            	width:72%;
+	            	height: 20px;
+	            	padding-top:20px;
+	            	padding-left:10px;
+	            	position:relative;
+	            	top:50%;
+	            	float: right;
+	            	/*background-color: green;*/
+	            }
+	            .userinfo-mini{
+	            	width:0px;
+	            	height:0px;
+	            	overflow: hidden;
+	            	position:relative;
+	            	top:2%;
+	            	float: right;
+	            }
+	            </style>
+	            
+	        </div>
+    <!--   </tr> -->
 	        </div>
 	        <ul>
 	        	<li class="nav-item">
@@ -56,12 +84,13 @@ error_reporting(E_ALL | E_STRICT);
 	            <li class="nav-item">
 	                <a href="javascript:;"><i class="iconfont icon-houtai-xitongguanli"></i><span>系统管理</span><i class="iconfont icon-gengduo"></i></a>
 	                <ul>
+	                	<li><a href="pub.php" target="menuFrame"><span>出版社信息设置</span></a></li>
+	                	<li><a href="type.php" target="menuFrame"><span>图书类型设置</span></a></li>
+	                	<li><a href="bookcase.php" target="menuFrame"><span>书架设置</span></a></li>                 
 	                    <li><a href="library_modify.php" target="menuFrame"><span>图书馆信息</span></a></li>
 	                    <li><a href="manager.php" target="menuFrame"><span>管理员管理</span></a></li>
 	                    <li><a href="parameter_modify.php" target="menuFrame"><span>证件参数设置</span></a></li>
-	                    <li><a href="bookcase.php" target="menuFrame"><span>书架设置</span></a></li>
-	                    <li><a href="type.php" target="menuFrame"><span>图书类型设置</span></a></li>
-	                    <li><a href="pub.php" target="menuFrame"><span>出版社信息设置</span></a></li>
+
 
 	                </ul>
 	            </li>

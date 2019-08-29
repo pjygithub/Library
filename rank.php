@@ -1,6 +1,9 @@
 <?php 
   include ("check_login.php"); 
   include("conn/conn.php");
+  //关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
   if (!session_id()) session_start();
 ?>
 <!DOCTYPE html>
@@ -46,8 +49,11 @@
 		color: red;
 		font-size: 20px;
 	}
+	.bodymargin{
+		margin-left:1%;
+	}
 </style>
-<body style="margin-left:17%;margin-top:20px;height:50%;width:83%">
+<body style="margin-left:17%;margin-top:20px;height:100%;width:83%">
   <div class="home_head">
   	<p >当前位置：<a href="./rank.php">首页</a></p>
   </div>

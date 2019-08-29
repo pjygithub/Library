@@ -1,6 +1,10 @@
 <?php
 include ("check_login.php"); 
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
  if (!session_id()) session_start();
+ 
  ?>
 <!DOCTYPE html>
 <html>
@@ -71,8 +75,8 @@ include ("check_login.php");
       <th style="width:4%">页码</th>
       <th style="width:4%">价格</th>
       <th style="width:4%">类型</th>
-      <th style="width:5%">出版年月</th>
-      <th style="width:5%">印刷年月</th>
+      <th style="width:5%">出版<br>年月</th>
+      <th style="width:5%">印刷<br>年月</th>
       <th style="width:4%">字数:千字</th>
       <th style="width:4%">总库存:本</th>
       <th style="width:6%">预览图</th>

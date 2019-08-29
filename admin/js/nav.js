@@ -21,9 +21,14 @@ $(function(){
             $('.nav-item.nav-show').removeClass('nav-show');
             $('.nav-item').children('ul').removeAttr('style');
             $('.nav').addClass('nav-mini');
-            $('#mini').removeClass('userinfo');
+            $('.userinfo').addClass('userinfo-mini');
+            $('.userinfo-mini.userinfo').removeClass('userinfo');
+            // $('#mini').hasElements('img');
         }else{
             $('.nav').removeClass('nav-mini');
+            $('.userinfo-mini').addClass('userinfo');
+            $('.userinfo-mini.userinfo').removeClass('userinfo-mini');
+
             
         }
     });

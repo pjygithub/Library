@@ -1,5 +1,8 @@
 <?php
 include ("check_login.php"); 
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
  if (!session_id()) session_start();?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +13,7 @@ include ("check_login.php");
 	<script src="./common/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="margin-left:17%;margin-top:0px;height:auto;width:100%;">
+<body style="margin-left:17%;margin-top:0px;height:100%;width:100%;">
           <form class="form-inline" name="form1" method="post" action="">
           <table bordercolor="#FFFFFF" bgcolor="#9ECFEE" style="margin-top:2%;font-size:15px;">
   <tr style="margin-top:0px;font-size:15px;">

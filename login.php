@@ -33,7 +33,7 @@ function check(form){
 					width:100%;
 					position:fixed;
 					top:20%;
-					font-size:26px;
+					font-size:30px;
 					text-align:center;
 					z-index:999;
 					color:#000;

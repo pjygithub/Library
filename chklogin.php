@@ -1,4 +1,7 @@
 ﻿<?php
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
 session_start();
 $A_name=$_POST["name"];          //接收表单提交的用户名
 $A_pwd=md5($_POST["pwd"]);            //接收表单提交的密码

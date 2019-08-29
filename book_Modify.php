@@ -171,7 +171,7 @@ form.submit();
 		</div>
 		<label for="firstname" class="col-sm-2 control-label">出版年月</label>
 		<div class="col-sm-10" style="width:30%">
-			<input name="pubTime" type="text" class="form-control" id="pubTime" value="<?php echo $info[pubTime];?>" onblur="pubtoprint(this.id,this.value)">
+			<input name="pubTime" type="text" class="form-control" id="pubTime" value="<?php echo $info[pubTime];?>">
 		</div>
 		<label for="firstname" class="col-sm-2 control-label">版次</label>
 		<div class="col-sm-10" style="width:30%">

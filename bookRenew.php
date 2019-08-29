@@ -55,20 +55,20 @@ $info=mysql_fetch_array($sql);
 
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">姓名</label>
-    <div class="col-sm-10" style="width:10%">
-      <input name="readername" type="hidden" class="form-control" id="readername" value="<?php echo $info["name"];?>" readonly>
-      <input name="readerid" type="text" class="form-control" id="readerid" value="<?php echo $info["id"];?>" readonly>
+    <div class="col-sm-10" style="width:30%">
+      <input name="readerid" type="hidden" class="form-control" id="readerid" value="<?php echo $info["id"];?>" readonly>
+      <input name="readername" type="text" class="form-control" name="readerid" value="<?php echo $info["name"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">性别</label>
-    <div class="col-sm-10"  style="width:10%">
+    <div class="col-sm-10"  style="width:30%">
       <input name="sex" type="text" class="form-control" id="bookName" value="<?php echo $info["sex"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">证件类型</label>
-    <div class="col-sm-10"  style="width:10%;">
+    <div class="col-sm-10"  style="width:30%;">
       <input name="paperType" type="text" class="form-control" id="paperType" value="<?php echo $info["paperType"];?>" readonly>
     </div>
   </div>
@@ -80,13 +80,13 @@ $info=mysql_fetch_array($sql);
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">读者类型</label>
-    <div class="col-sm-10"  style="width:10%">
+    <div class="col-sm-10"  style="width:30%">
       <input name="readerType" type="text" class="form-control" id="readerType" value="<?php echo $info["number"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">可借数量</label>
-    <div class="col-sm-10"  style="width:10%">
+    <div class="col-sm-10"  style="width:30%">
       <input name="number" type="text" class="form-control" id="number" value="<?php echo $info["number"];?>" readonly>
     </div>
   </div>  

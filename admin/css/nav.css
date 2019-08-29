@@ -41,6 +41,7 @@ a{text-decoration:none;}
 .nav-mini.nav .nav-item:hover .nav-item a{color:#FFF;}
 .nav-mini.nav .nav-item:hover a:before{opacity:1;}
 .nav-mini.nav .nav-item:hover ul{display: block;}
+/*.userinfo-mini{width: 0%}*/
 
 
 

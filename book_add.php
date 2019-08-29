@@ -69,7 +69,7 @@ form.submit();
 		<select name="typeId" class="form-control" id="typeId">
 		<?php
 		  include("conn/conn.php");
-		  $sql=mysql_query("select * from tb_booktype");
+		  $sql=mysql_query("select * from tb_booktype ");
 		  $info=mysql_fetch_array($sql);
 		  do{
 		?> 		
@@ -92,7 +92,7 @@ form.submit();
 		<div class="col-sm-10" style="width:30%">
 		<select name="isbn" class="form-control" id="isbn" value="未知">
 		<?php
-		  $sql2=mysql_query("select * from tb_publishing");
+		  $sql2=mysql_query("select * from tb_publishing ORDER BY `pubname` ASC");
 		  $info2=mysql_fetch_array($sql2);
 		  do{
 		?> 		
@@ -124,7 +124,21 @@ form.submit();
 		<?php
 		}while($info3=mysql_fetch_array($sql3));
 		?> 
-		    </select> <a href="./bookcase.php">添加书架？</a> 
+		<script type="text/javascript">
+		function openwin(){      
+  　　OpenWindow=window.open("./bookcase.php","newwin", "height=250,   width=500,toolbar=no,scrollbars="+scroll+",menubar=no");      
+  　　//写成一行      
+  // 　　OpenWindow.document.write("<TITLE>例子</TITLE>")      
+  // 　　OpenWindow.document.write("<BODY   BGCOLOR=#ffffff>")      
+  // 　　OpenWindow.document.write("<h1>Hello!</h1>")      
+  // 　　OpenWindow.document.write("New   window   opened!")      
+  // 　　OpenWindow.document.write("</BODY>")      
+  // 　　OpenWindow.document.write("</HTML>")      
+  　　OpenWindow.document.close()      
+  　　}      
+
+		</script>
+		    </select> <a href="#" onclick="openwin()">添加书架？</a> 
 		    <input name="operator" type="hidden" id="operator" value="<?php echo $info3["name"];?>">
         </div> 
         <label for="firstname" class="col-sm-2 control-label">图书封面图地址</label>

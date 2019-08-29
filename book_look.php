@@ -34,6 +34,14 @@
 			/*background-color:#565656;*/
 			/*width: 33%;*/
 		}
+		.book_all_info tr td:first-child{
+			font-size:16px;
+			text-align: right;
+			line-height: 26px;
+			padding-left:0%;
+			/*background-color:#565656;*/
+			/*width: 33%;*/
+		}
 		.form1{
 			width: 50%;
 		}

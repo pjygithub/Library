@@ -1,5 +1,8 @@
 <?php
 include ("check_login.php"); 
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
  if (!session_id()) session_start();?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,7 @@ include ("check_login.php");
 <body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
 <?php
 include("conn/conn.php");       //连接数据源信息
-$sql=mysql_query("select * from tb_bookcase order by id desc");      //查询图书书架信息表中的数据信息
+$sql=mysql_query("SELECT * FROM `tb_bookcase` ORDER BY `id` ASC");      //查询图书书架信息表中的数据信息
 $info=mysql_fetch_array($sql);      //执行SQL语句
 if($info==false){      //如果图书书架信息表中为空值，则弹出“暂无书架信息”
 ?>

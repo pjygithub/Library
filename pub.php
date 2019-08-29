@@ -1,5 +1,8 @@
 <?php
 include ("check_login.php"); 
+//关闭报错
+ini_set("display_errors", "off");
+error_reporting(E_ALL | E_STRICT);
  if (!session_id()) session_start();?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,7 @@ include ("check_login.php");
 <body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
     <?php 
     include("conn/conn.php");
-    $sql=mysql_query("select * from tb_publishing");
+    $sql=mysql_query("select * from tb_publishing ORDER BY `pubname` ASC");
     $info=mysql_fetch_array($sql);
 
     if($info==false){
@@ -34,7 +37,7 @@ include ("check_login.php");
 <table class="table table-hover">
 	<thead>
 		<tr  bgcolor="#E6E6FA">
-      <th width="8%">序号</th>
+      <!-- <th width="8%">序号</th> -->
 			<th width="30%">出版社</th>
       <th width="20%">出版社电话</th>
 			<th width="45%">通讯地址</th>
@@ -48,11 +51,11 @@ include ("check_login.php");
 do{
 ?> 
   <tr>
-        <td >&nbsp;<?php echo $info["ISBN"];?></td>
-    <td >&nbsp;<?php echo $info["pubname"];?></td>
-    <td >&nbsp;<?php echo $info["pubPhoneNum"];?></td>
-    <td >&nbsp;<?php echo $info["pubAdrr"];?></td>
-    <td >&nbsp;<?php echo $info["pubUrl"];?></td>
+    <!-- <td >&nbsp;<?php echo $info["ISBN"];?></td> -->
+    <td ><?php echo $info["pubname"];?></td>
+    <td ><!-- &nbsp; --><?php echo $info["pubPhoneNum"];?></td>
+    <td ><?php echo $info["pubAdrr"];?></td>
+    <td ><a href="<?php echo $info["pubUrl"];?>" target="_black"><?php echo $info["pubUrl"];?></a></td>
     <td ><a class="btn btn-primary" href="pub_del.php?isbn=<?php echo $info["ISBN"];?>">删除</a></td>
   </tr>
 <?php
