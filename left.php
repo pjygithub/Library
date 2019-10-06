@@ -1,9 +1,3 @@
-<?php 
-include ("check_login.php"); 
-//关闭报错
-ini_set("display_errors", "off");
-error_reporting(E_ALL | E_STRICT);
-?>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -13,42 +7,14 @@ error_reporting(E_ALL | E_STRICT);
 	<title>图书管理系统-后台</title>
 	<link rel="stylesheet" type="text/css" href="admin/css/htmleaf-demo.css">
 	<link rel="stylesheet" type="text/css" href="admin/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="admin/fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="admin/fonts/iconfont.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
-
-<body>
-	<div class="nav-mini" style="height:100%;">
+<div class="nav-mini" style="height:100%;">
 	        <div class="nav-top">
 	            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)">
-	            <!-- <p class="userinfo" style="">欢迎您，<?php echo $_SESSION["admin_name"];?>。</p> -->
+	            <p class="userinfo-mini" style="">欢迎您，<?php echo $_SESSION["admin_name"];?>。</p>
 	            <img src="admin/images/mini.png">
-	            <style type="text/css">
-	            *{
-	            	margin: 0px;
-	            	padding: 0px;
-	            }
-	            .userinfo{
-	            	width:72%;
-	            	height: 20px;
-	            	padding-top:20px;
-	            	padding-left:10px;
-	            	position:relative;
-	            	top:50%;
-	            	float: right;
-	            	/*background-color: green;*/
-	            }
-	            .userinfo-mini{
-	            	width:0px;
-	            	height:0px;
-	            	overflow: hidden;
-	            	position:relative;
-	            	top:2%;
-	            	float: right;
-	            }
-	            </style>
-	            
-	        </div>
-    <!--   </tr> -->
 	        </div>
 	        <ul>
 	        	<li class="nav-item">
@@ -103,14 +69,3 @@ error_reporting(E_ALL | E_STRICT);
 	            </li>
 	        </ul>
 	    </div>
-
-		<div class="page_content" style="height:100%">
-          <iframe id="menuFrame" name="menuFrame" src="rank.php" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:right">
-          </iframe>
-	 	</div>
-
-	<script src="./common/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-	<script>window.jQuery || document.write('<script src="admin/js/jquery-1.11.0.min.js"><\/script>')</script>
-	<script type="text/javascript" src="admin/js/nav.js"></script>
-</body>
-</html>

@@ -12,8 +12,9 @@ error_reporting(E_ALL | E_STRICT);
 	<link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="./common/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
+<body style="">
 <?php 
 include("conn/conn.php");
 $sql=mysql_query("select r.id,r.barcode,r.name,t.name as typename,r.paperType,r.paperNO,r.tel,r.email from tb_reader as r join (select * from tb_readertype) as t on r.typeid=t.id");
@@ -37,10 +38,10 @@ if($info==false){
 			<th >读者ID</th>
 			<th >姓名</th>
 			<th >读者类型</th>
-			<th >证件类型</th>
-			<th >证件号码</th>
+			<th class="mini-hidden">证件类型</th>
+			<th class="mini-hidden">证件号码</th>
 			<th >电话</th>
-			<th >mail</th>
+			<th class="mini-hidden">mail</th>
 			<th >操作</th>
 		</tr>
 	</thead>
@@ -52,11 +53,11 @@ do{
  <tr>
     <td><?php echo $info["barcode"];?> </td>  
     <td><a href="reader_info.php?id=<?php echo $info["id"]; ?> "><?php echo $info["name"];?> </a></td>
-    <td style="padding:5px;"><?php echo $info["typename"];?> </td>
-    <td><?php echo $info["paperType"];?> </td>
-    <td ><?php echo $info["paperNO"];?> </td>
+    <td style="" ><?php echo $info["typename"];?> </td>
+    <td class="mini-hidden"><?php echo $info["paperType"];?> </td>
+    <td class="mini-hidden"><?php echo $info["paperNO"];?> </td>
     <td>&nbsp;<?php echo $info["tel"];?> </td>
-    <td align="left">&nbsp;<?php echo $info["email"];?> </td>
+    <td align="left" class="mini-hidden">&nbsp;<?php echo $info["email"];?> </td>
     <td ><a class="btn btn-primary" href="reader_modify.php?id=<?php echo $info["id"];?>">修改</a>
     <a class="btn btn-primary" href="reader_del.php?id=<?php echo $info["id"];?> ">删除</a></td>
   </tr>

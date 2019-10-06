@@ -50,9 +50,9 @@ input, button {
   top: 50%;
   left: 50%;
   margin-left: -15rem;
-  margin-top: -26.5rem;
+  margin-top: -27.5rem;
   width: 30rem;
-  height: 53rem;
+  height: 55rem;
   overflow: hidden;
 }
 
@@ -66,6 +66,16 @@ input, button {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+  border-radius: 15px 15px;
+}
+.login form p.tagname{
+  width:100%;
+  position:absolute;
+  top:20%;
+  font-size:4.5rem;
+  text-align:center;
+  z-index:999;
+  color:#000;
 }
 .login.inactive {
   opacity: 0;
@@ -102,7 +112,7 @@ input, button {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 40%;
   padding: 1.5rem 2.5rem;
   text-align: center;
 }
@@ -132,9 +142,10 @@ input, button {
   width: 22rem;
   height: 100%;
   padding-left: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: transparent;
   color: #FDFCFD;
+  border-radius: 3rem 3rem;
 }
 .login__submit {
   position: relative;
@@ -143,7 +154,7 @@ input, button {
   margin: 5rem 0 2.2rem;
   color: rgba(255, 255, 255, 0.8);
   background: #FF3366;
-  font-size: 1.5rem;
+  font-size: 3rem;
   border-radius: 3rem;
   cursor: pointer;
   overflow: hidden;
@@ -190,8 +201,10 @@ input, button {
   opacity: 0;
 }
 .login__signup {
-  font-size: 1.2rem;
-  color: #ABA8AE;
+  font-size: 1.5rem;
+
+  color: rgb(109, 103, 114);
+
 }
 .login__signup a {
   color: #fff;

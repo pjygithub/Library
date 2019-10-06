@@ -9,37 +9,24 @@
 	<link rel="stylesheet" type="text/css" href="login/css/default.css">
 	<link rel="stylesheet" type="text/css" href="login/css/styles.css">
 	<script language="javascript">
-function check(form){
-	if (form.name.value==""){
-		alert("请输入管理员名称!");form.name.focus();return false;
-	}
-	if (form.pwd.value==""){
-		alert("请输入密码!");form.pwd.focus();return false;
-	}	
-}
+		function check(form){
+			if (form.name.value==""){
+				alert("请输入管理员名称!");form.name.focus();return false;
+			}
+			if (form.pwd.value==""){
+				alert("请输入密码!");form.pwd.focus();return false;
+			}	
+		}
 </script>
 </head>
 <body>
 	<div class="cont">
 	  <div class="demo">
 	    <div class="login">
-	          <img src="./login/joyWJEY.jpg" alt="" class="app__user-photo" />
+	        <img src="./login/joyWJEY.jpg" alt="" class="app__user-photo" />
 	      <!--<div class="login__check"></div>-->
 	      <form name="myform" method="post" action="chklogin.php">
-	      	<p class="tagname">
-			图书管理系统
-			<style type="text/css">
-				.tagname{
-					width:100%;
-					position:fixed;
-					top:20%;
-					font-size:30px;
-					text-align:center;
-					z-index:999;
-					color:#000;
-				}
-			</style>
-		</p>
+	      	<p class="tagname">图书管理系统</p>
 	      <div class="login__form">
 	        <div class="login__row">
 	          <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
@@ -56,7 +43,8 @@ function check(form){
 	        </form>
 	        <button type="submit" class="login__submit" onClick="return check(myform)">登 录</button>
 	    
-	       	<!-- <p class="login__signup" style="font-size:16px;">还没有账号? &nbsp;<a href="register.php" target="_self">立刻注册</a></p> -->
+			   <p class="login__signup" style="font-size:16px;">还没有账号? &nbsp;<a href="#" target="_self">马上注册</a></p>
+			   
 	    <!-- http://www.htmleaf.com/jQuery/Layout-Interface/201506081995.html -->
 	      </div>
 	    </div>

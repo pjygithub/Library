@@ -11,7 +11,8 @@ error_reporting(E_ALL | E_STRICT);
 	<title>图书管理系统</title>
 	<link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="./common/jquery/2.1.1/jquery.min.js"></script>
-	<script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body style="margin-left:0%;margin-top:0px;height:auto;width:145%;">
           <form class="form-inline" name="form1" method="post" action="">

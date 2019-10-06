@@ -12,6 +12,7 @@ error_reporting(E_ALL | E_STRICT);
   <link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
   <script src="./common/jquery/2.1.1/jquery.min.js"></script>
   <script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
   <script language="javascript">
 function check(myform){
   if(myform.flag1.checked==false && myform.flag2.checked==false){
@@ -40,7 +41,7 @@ function check(myform){
 </script>
 </head>
 
-<body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
+<body style="">
 
         <form  class="form-inline" name="myform" method="post" action="">
             <table>

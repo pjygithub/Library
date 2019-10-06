@@ -8,15 +8,20 @@ a{text-decoration:none;}
 /* 以上实际使用若已初始化可删除 */
 
 /* nav */
-.nav{width: 220px;height: 100%;background: #263238;transition: all .3s; position: absolute;top:0;left: 0;}
-.nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #ABB1B7;transition: all .3s;}
-.nav a span{margin-left: 30px;}
+.nav-mini{width: 60px;height: 100%;background: #263238;transition: all .3s; position: absolute;top:0;left: 0;}
+.nav-mini a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #ABB1B7;transition: all .3s;}
+.nav-mini a span{margin-left: 30px;}
+.nav-mini .nav-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
+.nav-mini .nav-item:hover{background:rgba(255,255,255,.1);}
+.nav-mini .nav-item:hover .nav-item a{color:#FFF;}
+.nav-mini .nav-item:hover a:before{opacity:0.6;}
+.nav-mini .nav-item:hover ul{display: none;}
 .nav-item{position: relative;}
 .nav-item.nav-show{border-bottom: none;}
 .nav-item ul{display: none;background: rgba(0,0,0,.1);}
-.nav-item.nav-show ul{display: block;}
+.nav-item.nav-show ul{display: block;opacity: 0.9;}
 .nav-item>a:before{content: "";position: absolute;left: 0px;width: 2px;height: 46px;background: #34A0CE;opacity:0;transition: all .3s;}
-.nav .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+/* .nav-mini .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;} */
 /* 此处修改导航图标 可自定义iconfont 替换*/
 .icon_1::after{content: "\e62b";}
 .icon_2::after{content: "\e669";}
@@ -30,20 +35,41 @@ a{text-decoration:none;}
 .nav-show,.nav-item>a:hover{color: #FFF;background:rgba(0,0,0,.1);}
 .nav-show>a:before,.nav-item>a:hover:before{opacity:1;}
 .nav-item li:hover a{color: #FFF;background: rgba(0, 0, 0,.1);}
+.nav-item>ul{border-top-right-radius: 10px;border-bottom-right-radius: 10px;}
+.hidden{display: none};
 
 /* nav-mini */
-.nav-mini.nav{width: 60px;}
-.nav-mini.nav .nav-icon{/* margin-left:-2px; */}
-.nav-mini.nav .nav-item>a span{display: none;}
-.nav-mini.nav .icon-gengduo{margin-right: -20px;}
-.nav-mini.nav .nav-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
-.nav-mini.nav .nav-item:hover{background:rgba(255,255,255,.1);}
-.nav-mini.nav .nav-item:hover .nav-item a{color:#FFF;}
-.nav-mini.nav .nav-item:hover a:before{opacity:1;}
-.nav-mini.nav .nav-item:hover ul{display: block;}
+.nav.nav-mini{width: 60px;height: 100%;background: #263238;transition: all .3s; position: absolute;top:0;left: 0;opacity: 0.8;}
+/* .nav.nav-mini .nav-icon{margin-left:-2px;}
+.nav.nav-mini .nav-item>a span{display: block;}
+.nav.nav-mini .icon-gengduo{margin-right: -20px;}
+.nav.nav-mini .nav-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
+.nav.nav-mini .nav-item:hover{background:rgba(255,255,255,.1);}
+.nav.nav-mini .nav-item:hover .nav-item a{color:#FFF;}
+.nav.nav-mini .nav-item:hover a:before{opacity:0.6;}
+.nav.nav-mini .nav-item:hover ul{display: none;}
+.nav.nav-mini a{overflow:visible;} */
+.nav.nav-mini a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #ABB1B7;transition: all .3s;}
+.nav.nav-mini a span{margin-left: 30px;}
+.nav.nav-mini .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+
 /*.userinfo-mini{width: 0%}*/
 
-
-
-
-
+.userinfo{
+    width:72%;
+    height: 20px;
+    padding-top:20px;
+    padding-left:10px;
+    position:relative;
+    top:50%;
+    float: right;
+    /*background-color: green;*/
+}
+.userinfo-mini{
+    width:0px;
+    height:0px;
+    overflow: hidden;
+    position:relative;
+    top:2%;
+    float: right;
+}

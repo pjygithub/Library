@@ -1,11 +1,11 @@
 <?php
-include ("check_login.php"); 
+	include ("check_login.php"); 
      //自定义关闭报错
     ini_set("display_errors", "off");
- session_start();
-include("conn/conn.php");
-$sql=mysql_query("select * from tb_parameter");
-$info=mysql_fetch_object($sql);
+	session_start();
+	include("conn/conn.php");
+	$sql=mysql_query("select * from tb_parameter");
+	$info=mysql_fetch_object($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,8 +15,9 @@ $info=mysql_fetch_object($sql);
 	<link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="./common/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./style.css">
 </head>
-<body style="margin-left:18%;margin-top:20px;height:50%;width:40%">
+<body>
 <form name="form1" method="post" action="parameterModify_ok.php" class="form-horizontal">
 	<div class="form-group">
 		<label for="firstname" class="col-sm-2 control-label">办证费</label>

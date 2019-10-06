@@ -20,7 +20,7 @@ class chkinput{                //定义类
      $sql=mysql_query("select * from tb_manager where name='".$this->name."' and pwd='".$this->pwd."'",$conn);
      $info=mysql_fetch_array($sql);       //检索管理员名称和密码是否正确
      if($info==false){                    //如果管理员名称或密码不正确，则弹出相关提示信息
-          echo "<script language='javascript'>alert('您输入的管理员名称错误，请重新输入！');history.back();</script>";
+          echo "<script language='javascript'>alert('您输入的用户名或密码错误！');history.back();</script>";
           exit;
        }
       else{                              //如果管理员名称或密码正确，则弹出相关提示信息

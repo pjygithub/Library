@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
   <script src="./common/jquery/2.1.1/jquery.min.js"></script>
   <script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
 
     <script language="javascript">
     function checkreader(form){
@@ -45,7 +46,7 @@
      }
     </script>
 </head>
-<body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
+<body>
   <?php
     include("conn/conn.php");
     $sql=mysql_query("select r.*,t.name as typename,t.number from tb_reader r left join tb_readerType t on r.typeid=t.id where r.barcode='".$_POST["barcode"]."'");
@@ -61,64 +62,65 @@
   
 
 <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">读者条形码：</label>
-    <div class="col-sm-10" style="width:30%;float:left;">
+    <label for="firstname" class="col-sm-2 control-label">读者条形码</label>
+    <div class="col-sm-10" style="">
       <input name="barcode" type="text" class="form-control" id="barcode" value="<?php echo $info["barcode"];?>">
     </div>
 <!-- 
   </div> -->
 <!--   <div class="form-group"> -->
-    <div class="col-sm-offset-2 col-sm-10" style="width:30%;float:left;margin-left:0px;" >
+    <div class="col-sm-offset-2 col-sm-10" style="" >
       <button name="Button" type="button" class="btn btn-primary" onClick="checkreader(form1)" value="查询条码">查询条码</button>
     </div>    
   </div>
 
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">姓名</label>
-    <div class="col-sm-10" style="width:30%">
+    <div class="col-sm-10" style="">
       <input name="readername" type="hidden" class="form-control" id="readername" value="<?php echo $info["name"];?>" readonly>
       <input name="name" type="text" class="form-control" id="name" value="<?php echo $info["name"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">性别</label>
-    <div class="col-sm-10"  style="width:30%">
+    <div class="col-sm-10"  style="">
       <input name="sex" type="text" class="form-control" id="bookName" value="<?php echo $info["sex"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">证件类型</label>
-    <div class="col-sm-10"  style="width:30%;">
+    <div class="col-sm-10"  style="">
       <input name="paperType" type="text" class="form-control" id="paperType" value="<?php echo $info["paperType"];?>" readonly>
     </div>
   </div>
   <div class="form-group" style="width:;">
     <label for="firstname" class="col-sm-2 control-label">证件号码</label>
-    <div class="col-sm-10"  style="width:30%;">
+    <div class="col-sm-10"  style="">
       <input name="paperNo" type="text" class="form-control" id="paperNo" value="<?php echo $info["paperNO"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">读者类型</label>
-    <div class="col-sm-10"  style="width:30%">
+    <div class="col-sm-10"  style="">
       <input name="readerType" type="text" class="form-control" id="readerType" value="<?php echo $info["typename"];?>" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">可借数量</label>
-    <div class="col-sm-10"  style="width:30%">
+    <div class="col-sm-10"  style="">
       <input name="number" type="text" class="form-control" id="number" value="<?php echo $info["number"];?>" readonly>
     </div>
   </div>  
-    <div  >
-      <div style="background-color:;width:98%;float:left;margin-left:0px;z-index:980"><label for="firstname" class="col-sm-2 control-label">添加的依据</label>
-         <input name="f" type="radio" class="noborder" value="barcode" checked  style="width:2%">
-                     图书条形码
-          <input name="f" type="radio" class="noborder" value="bookname"  style="width:4%">图书名称
-       <div class="form-group" style="background-color:;width:55%;float:right;margin-left:0px;position:fixed;right:0px;top:59%;z-index:800" >
-    <div class="col-sm-offset-2 col-sm-10" style="width:60%;background-color:;float:left;">
-      <input name="inputkey" type="text" class="form-control" id="inputkey"  style="width:80%;float:left;margin-left:0px">
-      <button name="Submit" id="Submit" type="button" class="btn btn-primary" onClick="checkbook(form1);" value="添加借阅" style="float:right;margin-left:0px;">添加借阅</button>
+    <div >
+      <div class="addtype" style="">
+          <label for="firstname" class="col-sm-2 control-label">添加的依据</label>
+          <input name="f" type="radio" class="noborder" value="barcode" checked  style="">
+          图书条形码
+          <input name="f" type="radio" class="noborder" value="bookname"  style="">图书名称
+      <div class="form-group" style="" >
+    <div class="col-sm-offset-2 col-sm-10" style="">
+      <input name="inputkey" type="text" class="form-control" id="inputkey"  style="">
+      <button name="Submit" id="Submit" type="button" class="btn btn-primary" onClick="checkbook(form1);" value="添加借阅" style="">添加借阅</button>
        <input name="operator" type="hidden" id="operator" value="<?php echo $_SESSION["adminname"];?>">
     </div>    
   </div>

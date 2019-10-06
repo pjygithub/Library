@@ -11,9 +11,10 @@ error_reporting(E_ALL | E_STRICT);
 	<title>图书管理系统</title>
 	<link rel="stylesheet" href="./common/bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="./common/jquery/2.1.1/jquery.min.js"></script>
-	<script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./common/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin-left:18%;margin-top:20px;height:50%;width:80%">
+<body style="">
 <?php 
     include("conn/conn.php");
     date_default_timezone_set('UTC');
